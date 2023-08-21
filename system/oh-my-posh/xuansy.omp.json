@@ -68,6 +68,15 @@
           "style": "diamond",
           "template": "<#ffffff>RAM: </>{{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
           "type": "sysinfo"
+        },
+        {
+          "foreground": "#3EC669",
+          "properties": {
+            "time_format": "| 15:04:05 "
+          },
+          "style": "plain",
+          "template": "{{ .CurrentDate | date .Format }} ",
+          "type": "time"
         }
       ],
       "type": "prompt"
