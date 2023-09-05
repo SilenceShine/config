@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#0CA0D8",
+          "properties": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "{{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "#D4AAFC",
+          "properties": {
+            "branch_icon": ""
+          },
+          "style": "plain",
+          "template": " on <#DDB15F>git(</>{{ .HEAD }}<#DDB15F>)</>",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "kubectl",
+          "style": "powerline",
+          "foreground": "#22A7F2",
+          "powerline_symbol": "",
+          "template": "context :: {{.Context}} | "
+        },
+        {
+          "foreground": "#a9ffb4",
+          "properties": {
+            "style": "dallas",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": "<#ffffff>tims: </>{{ .FormattedMs }}s ",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#94ffa2",
+          "style": "diamond",
+          "template": "<#ffffff>CPU: </>{{ round .PhysicalPercentUsed .Precision }}% ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#81ff91",
+          "style": "diamond",
+          "template": "<#ffffff>RAM: </>{{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#3EC669",
+          "properties": {
+            "time_format": "| 15:04:05 "
+          },
+          "style": "plain",
+          "template": "{{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#FFFFFF",
+          "style": "plain",
+          "template": "<#0377C8># </><#0377C8>{{ .UserName }}</> <#ffffff>in</> <#4A9207>{{ .HostName }}</> ",
+          "type": "session"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
