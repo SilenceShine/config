@@ -77,7 +77,7 @@
         {
           "foreground": "#FFFFFF",
           "style": "plain",
-          "template": "<#0377C8># </><#0377C8>{{ .UserName }}</> <#ffffff>in</> <#4A9207>{{ .HostName }}</> ",
+          "template": "<#0377C8># </><#0377C8>{{ .UserName }}</> <#ffffff>in</> <#4A9207>{{ .HostName }}</>",
           "type": "session"
         }
       ],
