@@ -77,8 +77,14 @@
         {
           "foreground": "#FFFFFF",
           "style": "plain",
-          "template": "<#0377C8># </><#0377C8>{{ .UserName }}</> <#ffffff>in</> <#4A9207>{{ .HostName }}</>",
+          "template": "<#0377C8># </><#0377C8>{{ .UserName }}</> <#ffffff>in</> <#81ff91>{{ .HostName }} </>",
           "type": "session"
+        },
+        {
+          "foreground": "#DDB15F",
+          "style": "plain",
+          "template": "\u279c",
+          "type": "text"
         }
       ],
       "type": "prompt"
