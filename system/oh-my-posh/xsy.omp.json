@@ -83,7 +83,7 @@
         {
           "foreground": "#DDB15F",
           "style": "plain",
-          "template": "\u279c",
+          "template": "\u279c ",
           "type": "text"
         }
       ],
